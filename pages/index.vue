@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     <div>
-      <logo />
       <h1 class="title">
         Pathfinder Itinerary
       </h1>
@@ -9,25 +8,55 @@
         Search the best routes to your destination.
       </h2>
       <div class="columns">
-        <div class="column">
-          From
+        <div class="column is-one-quarter">
+          <div class="field">
+            <label class="label is-medium">From</label>
+            <div class="control">
+              <input id="from" type="text" class="input is-medium">
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="field">
+            <label class="label is-medium">To</label>
+            <div class="control">
+              <input id="to" type="text" class="input is-medium">
+            </div>
+          </div>
         </div>
         <div class="column">
-          To
+          <div class="field">
+            <label class="label is-medium">Start date</label>
+            <div class="control">
+              <input id="startDate" type="text" class="input is-medium">
+            </div>
+          </div>
         </div>
         <div class="column">
-          Start date
+          <div class="field">
+            <label class="label is-medium">End date</label>
+            <div class="control">
+              <input id="endDate" type="text" class="input is-medium">
+            </div>
+          </div>
         </div>
         <div class="column">
-          End date
-        </div>
-        <div class="column">
-          Guests
+          <div class="field">
+            <label class="label is-medium">Guests</label>
+            <div class="control">
+              <input id="guests" type="text" class="input is-medium">
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="links">
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          class="button--grey"
+          @click="search"
+        >Search</a>
+        <a
+          href="https://github.com/capyme/pathfinder-frontend"
           target="_blank"
           class="button--grey"
         >GitHub</a>
@@ -37,11 +66,20 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
+  data() {
+    return {
+      from: '',
+      to: '',
+      startDate: '',
+      endDate: '',
+      guests: ''
+    }
+  },
+  methods: {
+    search: function() {
+      alert('procurou porra')
+    }
   }
 }
 </script>
