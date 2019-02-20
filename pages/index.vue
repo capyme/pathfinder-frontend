@@ -12,7 +12,7 @@
           <div class="field">
             <label class="label is-medium">From</label>
             <div class="control">
-              <input id="from" type="text" class="input is-medium">
+              <input id="from" v-model="from" type="text" class="input is-medium">
             </div>
           </div>
         </div>
@@ -20,7 +20,7 @@
           <div class="field">
             <label class="label is-medium">To</label>
             <div class="control">
-              <input id="to" type="text" class="input is-medium">
+              <input id="to" v-model="to" type="text" class="input is-medium">
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
           <div class="field">
             <label class="label is-medium">Start date</label>
             <div class="control">
-              <input id="startDate" type="text" class="input is-medium">
+              <input id="startDate" v-model="startDate" type="text" class="input is-medium">
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
           <div class="field">
             <label class="label is-medium">End date</label>
             <div class="control">
-              <input id="endDate" type="text" class="input is-medium">
+              <input id="endDate" v-model="endDate" type="text" class="input is-medium">
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@
           <div class="field">
             <label class="label is-medium">Guests</label>
             <div class="control">
-              <input id="guests" type="text" class="input is-medium">
+              <input id="guests" v-model="guests" type="text" class="input is-medium">
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default {
   },
   methods: {
     search: function() {
-      alert('procurou porra')
+      // TODO add the axios call to elixir
     }
   }
 }
