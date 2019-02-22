@@ -79,6 +79,19 @@ export default {
   methods: {
     search: function() {
       // TODO add the axios call to elixir
+      body = {
+        from: this.from,
+        to: this.to,
+        startDate: this.startDate,
+        endDate: this.endDate,
+        guests: this.guests
+      }
+      return axios.post('http://localhost:4000', body, {
+        headers: {
+          'accept': 'application/json'
+        },
+        withCredentials: true
+      })
     }
   }
 }
